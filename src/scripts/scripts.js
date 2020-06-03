@@ -5,7 +5,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 let scene, camera, renderer, hlight, car, directionalLight, light, light2, light3, light4, controls;
 function init() {
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xdddddd);
+    scene.background = new THREE.Color(0x000000);
     camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 5000);
     camera.rotation.y = 45/180*Math.PI;
     camera.position.x = 800;
