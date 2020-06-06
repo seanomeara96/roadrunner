@@ -15,8 +15,8 @@ const postcssPlugins = [
 
 class RunAfterCompile {
     apply(compiler){
-        compiler.hooks.done.tap('Copy Images',()=>{
-            fse.copySync('./src/images','./docs/images')
+        compiler.hooks.done.tap('Copy Models',() => {
+            fse.copySync('./src/model','./docs/model')
         })
     }
 }
