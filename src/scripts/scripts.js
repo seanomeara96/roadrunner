@@ -51,7 +51,7 @@ function init() {
     document.body.appendChild(renderer.domElement);
     let loader = new GLTFLoader();
     controls = new OrbitControls(camera, renderer.domElement);
-    loader.load('/model/racecadii.gltf', (gltf) => {
+    loader.load('./model/racecadii.gltf', (gltf) => {
         car = gltf.scene.children[0];
         car.scale.set(1000,1000,1000);
         scene.add(gltf.scene);
