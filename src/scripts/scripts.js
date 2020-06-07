@@ -16,7 +16,7 @@ let scene,
     controls;
 function init() {
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x000000);
+    scene.background = new THREE.Color(0x3C4144);
     camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 5000);
     
     camera.position.set(0,-300,100)
@@ -29,11 +29,12 @@ function init() {
     directionalLight.castShadow = true;
     scene.add(directionalLight);
 
-    light = new THREE.PointLight(0xc4c4c4,10);
-    light.position.set(0,300,500);
+    light = new THREE.PointLight(0xc4c4c4,1);
+    light.position.set(500,-300,100);
     scene.add(light);
 
-    light2 = new THREE.PointLight(0xc4c4c4,10);
+    /**
+     * light2 = new THREE.PointLight(0xc4c4c4,10);
     light2.position.set(500,100,0);
     scene.add(light2);
 
@@ -44,6 +45,7 @@ function init() {
     light4 = new THREE.PointLight(0xc4c4c4,10);
     light4.position.set(-500,300,0);
     scene.add(light4);
+     */
 
     renderer = new THREE.WebGLRenderer({antialias: true});
     renderer.setSize(window.innerWidth,window.innerHeight);
